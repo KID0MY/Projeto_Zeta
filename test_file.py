@@ -1,16 +1,27 @@
 import json
 
 class JsonOperations:
-# Json Operations
-    def ReadJson(self,shouldOpen):
-        if shouldOpen == True:
-            with open("todo.json", "r") as jsonfile:
-                self.data = json.load(jsonfile)
-        print(data)
 
-    def WriteJson(self,NewData):
-        print(self.data)
+    def __init__(self,jsonfile):
+        self.jsonfile = jsonfile
+        print(self.jsonfile)
     
+    def ReadJson(self):
+        print(self.jsonfile)
+        with open(self.jsonfile, "r") as jfile:
+            self.data = json.load(jfile)
+
+    def DisplayJson(self):
+        print(self.data)
+
+    def WriteJson(self):
+      with open(self.jsonfile, "w") as jfileW:
+            self.write = json.dumps(newdata)  
+
+file = JsonOperations("todo.json")
+
+file.ReadJson()
+file.DisplayJson()
 
 """
     def ReadJson():
@@ -26,4 +37,3 @@ class JsonOperations:
 
 """
 #    def WriteJson(self, Datajson, Wjson):
-JsonOperations.ReadJson(True)

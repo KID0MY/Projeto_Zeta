@@ -1,0 +1,11 @@
+Exception has occurred: JSONDecodeError
+Expecting value: line 1 column 1 (char 0)
+StopIteration: 0
+
+During handling of the above exception, another exception occurred:
+
+  File "D:\GitHub Repositories\Projeto_Zeta\main.py", line 40, in ReadJson
+    self.data = json.load(jfile)
+  File "D:\GitHub Repositories\Projeto_Zeta\main.py", line 61, in <module>
+    file.ReadJson()
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
