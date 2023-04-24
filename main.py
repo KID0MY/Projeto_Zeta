@@ -39,19 +39,31 @@ class operations:
 
 class JsonOperations:
     # Json Operations(Working on it)
-    def __init__(self,jsonfile):
+    def __init__(self,jsonfile): #initialize Json Stuff
         print(checkbox_good, "-> JsonOperations.init in work")
         self.jsonfile = jsonfile
         data = operations.transmit(newdata)
+        self.oldata = None
+        self.retornoj = None
         print("The Json File is: ", self.jsonfile, "and data = ", data) # it is working
 
-    #fix bug 
+    def CheckJson(self): #get old data + new data
+        print(checkbox_good, "-> JsonOperations.CheckJson in work")
+        print("The variables are:", self.oldata, "and", self.fdata)
+        if self.oldata == None:
+            retornoj = self.fdata
+        else:
+            retornoj = self.oldata, self.fdata
+        return retornoj
+
     def ReadJson(self):
         print(checkbox_good, "-> JsonOperations.ReadJson in work")
         try:
             with open(self.jsonfile, "r") as jfile:
                 self.data = json.load(jfile)
+                self.oldata = self.data
                 print(self.data)
+        #se o json tiver errado, zerar ele
         except json.decoder.JSONDecodeError as e:
             print(checkbox_bad, "Error: Invalid JSON syntax in the file:", self.jsonfile)
             print(checkbox_wait, "Adding default data to the file...")
@@ -68,7 +80,7 @@ class JsonOperations:
         print("this data will be written in the .json file:", data)
         self.fdata = data
         with open(self.jsonfile, "w") as jfileW:
-            jfileW.write(json.dumps(self.fdata))
+            jfileW.write(json.dumps(self.CheckJson()))
             print("Data Dumped")
         self.data = self.fdata
 
