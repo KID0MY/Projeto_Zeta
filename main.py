@@ -1,6 +1,6 @@
 # To-DO PRoject
 # ━━━━━━━<Bibliotecas>━━━━━━━━━━ #
-
+from operations import operations
 import colorama
 import datetime
 import json
@@ -23,19 +23,6 @@ def checkbox_status():
     else:
         checkbox = Fore.WHITE + "[" + Fore.GREEN + 'o' + Fore.WHITE + "]"
     return checkbox
-
-class operations:
-    # list operations
-
-    def add(taskname, date):
-        print(checkbox_good, "-> operations.add in work")
-        list.append(taskname)
-        list.append(date)
-
-    def transmit(data):
-        print(checkbox_good, "-> operations.transmit in work")
-        data = list
-        return data
 
 class JsonOperations:
     # Json Operations(Working on it)
@@ -86,6 +73,9 @@ class JsonOperations:
 
 # ━━━━━━━<Codigo Bruto>━━━━━━━━━ #
 
+#send list to class
+operations(list)
+
 #get task & date
 Add_task = input("Task name: ")
 get_date = datetime.datetime.now()
@@ -103,4 +93,3 @@ file.DisplayJson()
 
 
 print(checkbox_status(), data)
-
