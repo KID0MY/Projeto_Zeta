@@ -12,7 +12,7 @@ class operations:
     def add(taskname, date):
         print(checkbox_good, "-> operations.add in work")
         add = taskname + "," + date
-        AddToList()
+        self.AddToList()
 
     def AddToList(self):
         self.list.append(add)

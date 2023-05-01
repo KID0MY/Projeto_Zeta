@@ -4,6 +4,7 @@ from operations import operations
 import colorama
 import datetime
 import json
+import checkboxes
 
 from colorama import Fore
 
@@ -12,16 +13,13 @@ from colorama import Fore
 list = []
 newdata = None
 fjson = "todo.json"
-checkbox_bad = Fore.WHITE + "[" + Fore.RED + 'x' + Fore.WHITE + "]"
-checkbox_good = Fore.WHITE + "[" + Fore.GREEN + 'o' + Fore.WHITE + "]"
-checkbox_wait = Fore.WHITE + "[" + Fore.YELLOW + '-' + Fore.WHITE + "]"
 
 # ━━━━━━━━━━━<Classes>━━━━━━━━━━ #
 def checkbox_status():
     if data == None:
-        checkbox = Fore.WHITE + "[" + Fore.RED + 'x' + Fore.WHITE + "]"
+        checkbox.checkbox_bad
     else:
-        checkbox = Fore.WHITE + "[" + Fore.GREEN + 'o' + Fore.WHITE + "]"
+        checkbox.checkbox_good
     return checkbox
 
 class JsonOperations:
