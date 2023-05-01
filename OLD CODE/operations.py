@@ -1,8 +1,4 @@
-from colorama import Fore
-
-checkbox_bad = Fore.WHITE + "[" + Fore.RED + 'x' + Fore.WHITE + "]"
-checkbox_good = Fore.WHITE + "[" + Fore.GREEN + 'o' + Fore.WHITE + "]"
-checkbox_wait = Fore.WHITE + "[" + Fore.YELLOW + '-' + Fore.WHITE + "]"
+import checkboxes
 
 class operations:
     # list operations
@@ -12,7 +8,6 @@ class operations:
     def add(taskname, date):
         print(checkbox_good, "-> operations.add in work")
         add = taskname + "," + date
-        self.AddToList()
 
     def AddToList(self):
         self.list.append(add)
