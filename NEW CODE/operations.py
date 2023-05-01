@@ -9,3 +9,4 @@ class operations:
         self.list.append(self.task)
         self.list.append(self.date)
         print("list = ", self.list, "\nTask =", self.task,"\nDate =", self.date)
+        return self.list
