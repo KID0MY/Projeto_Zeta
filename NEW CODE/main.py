@@ -6,17 +6,22 @@ import datetime
 
 # ━━━━━━━━━━<Variaveis>━━━━━━━━━ #
 
+jsonfile = "todo.json"
+
 list = []
 
 # ━━━━━━━━━━━<Classes>━━━━━━━━━━ #
+
+
 def checkbox_status():
     if data == None:
         checkbox.checkbox_bad
     else:
         checkbox.checkbox_good
     return checkbox
-    
+
 # ━━━━━━━<Codigo Bruto>━━━━━━━━━ #
+
 
 Logo()
 
@@ -26,4 +31,6 @@ date = get_date.strftime("%x")
 
 op = operations(list, task, date)
 
-op.AddToList() #returning list with items
+fullentry = op.AddToList()  # returning list with items
+
+Jop = JsonOperations(jsonfile, fullentry)

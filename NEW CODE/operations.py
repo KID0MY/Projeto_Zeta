@@ -8,5 +8,6 @@ class operations:
     def AddToList(self):
         self.list.append(self.task)
         self.list.append(self.date)
-        print("list = ", self.list, "\nTask =", self.task,"\nDate =", self.date)
+        print("list = ", self.list, "\nTask =",
+              self.task, "\nDate =", self.date)
         return self.list
