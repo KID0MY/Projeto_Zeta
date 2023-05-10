@@ -1,12 +1,12 @@
 from jsonoperations import JsonOperations
-from title import Logo
+import start
 import checkboxes
 import datetime
 import os
 
 # ━━━━━━━━━━<Variaveis>━━━━━━━━━ #
 
-jsonfile = "NewCode/todo.json"
+jsonfile = "todo.json"
 
 list = []
 
@@ -22,7 +22,8 @@ def checkbox_status():
 
 # ━━━━━━━<Codigo Bruto>━━━━━━━━━ #
 
-Logo()
+start.Logo()
+start.Options()
 
 task = input("Task name: ")
 date = (datetime.datetime.now()).strftime("%x")
