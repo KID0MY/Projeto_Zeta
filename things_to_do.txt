@@ -1,0 +1,7 @@
+
+—> work on NewTask() user choice options in options.py
+    ==> it is working, however, not in the most optimal way.
+
+—> work on PrintTask() on options.py
+
+—> work on DeleteTask() on options.py

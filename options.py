@@ -12,14 +12,21 @@ class comecar:
         self.Jop = JsonOperations(jsonf)
 
     def NewTask(self):
-        self.Jop.GetUsers()
+        self.ChooseUser()
         task = input("Task name: ")
         date = (datetime.datetime.now()).strftime("%x")
         self.Jop.GetJsonData(task, date)
-        self.Jop.WriteJson("kidomy", "pending")
+        self.Jop.WriteJson(self.usertry, "pending")
 
-    def PrintTask():
-        print()
+    def ChooseUser(self):
+        self.Jop.GetUsers()
+        self.usertry = input("What is the user of this entry?: ")
 
-    def DeleteTask():
+
+
+
+    def PrintTask(self):
+        print(self.jsonf)
+
+    def DeleteTask(self):
         print()
