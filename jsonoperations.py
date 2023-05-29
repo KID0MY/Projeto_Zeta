@@ -10,12 +10,13 @@ class JsonOperations:
 
     # ━━━━━━━━━━━━|Get User|━━━━━━━━━━━━━━━ #
 
+    # ━━━|Get the User list from the json and create a options menu|━━━#
     def GetUsers(self):
         users = list(self.data.keys())
         print("Users:")
         for index, user in enumerate(users, start=1):
             print(f"{index} - {user}")
-        selected_number = int(input("Qual o usuario para a entrada de dados?(coloque o numero)\n>> "))
+        selected_number = int(input("Qual o usuario a ser escolhido?(coloque o numero)\n>> "))
         selected_user = None
         if selected_number >= 1 and selected_number <= len(users):
             selected_user = users[selected_number - 1]
@@ -48,10 +49,10 @@ class JsonOperations:
         print(
             f"Added task '{self.task_name}' for user {user_id} with status '{status}'")
 
-    def PrintJsonList(self):  # get old data + new data
-        user_id = "kidomy"
+    def PrintJsonList(self):  # print user list
+        user_id = self.GetUsers()
         if user_id in self.data:
-            tasks = data[user_id]
+            tasks = self.data[user_id]
             for task in tasks:
                 print(f"Task name: {task['task_name']}")
                 print(f"Status: {task['status']}")

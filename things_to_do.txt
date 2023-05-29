@@ -1,7 +1,8 @@
 
 —> work on NewTask() user choice options in options.py
-    ==> it is working, however, not in the most optimal way.
+    ==> it is Working.
 
 —> work on PrintTask() on options.py
+    ==> attacking this problem now!
 
 —> work on DeleteTask() on options.py

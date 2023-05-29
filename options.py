@@ -27,6 +27,10 @@ class comecar:
         else:
             print("No user selected.")
 
+    def PrintUsersTodo(self):
+        self.Jop.PrintJsonList()
+
+
     def PrintTask(self):
         print(self.jsonf)
 

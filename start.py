@@ -21,7 +21,8 @@ def Options():
         opt.NewTask()
         Options()
     elif Action == 2:
-        opt.PrintTask()
+        print(checkboxes.checkbox_wait, "Status = In Progress\n")
+        opt.PrintUsersTodo()
         Options()
     elif Action == 3:
         opt.DeleteTask()
