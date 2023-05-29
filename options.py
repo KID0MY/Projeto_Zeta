@@ -2,8 +2,9 @@ from jsonoperations import JsonOperations
 import checkboxes
 import datetime
 
-# ━━━━━━━━━━<Codigo>━━━━━━━━━━━ #
+# ━━━━━━━━<variavies>━━━━━━━━━━━ #
 
+selected_user = None
 
 # ━━━━━━━━━━<Classe>━━━━━━━━━━━ #
 class comecar:
@@ -19,11 +20,12 @@ class comecar:
         self.Jop.WriteJson(self.usertry, "pending")
 
     def ChooseUser(self):
-        self.Jop.GetUsers()
-        self.usertry = input("What is the user of this entry?: ")
-
-
-
+        selected_user = self.Jop.GetUsers()
+        if selected_user is not None:
+            self.usertry = selected_user
+            print("User selected:", self.usertry)
+        else:
+            print("No user selected.")
 
     def PrintTask(self):
         print(self.jsonf)
